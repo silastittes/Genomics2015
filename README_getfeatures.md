@@ -4,7 +4,7 @@ Designed for extracting features from organellar genomes. functional on genbank 
 
 Usage:
 ```
-python getfeatures.py --fasta <A_thaliana_cp.fasta> --genbank <A_thaliana_cp.gb>
+python getfeatures.py --fasta A_thaliana_cp.fasta --genbank A_thaliana_cp.gb
 ```
 
 Output is written to screen. Redirect to file with the ">" operator.
