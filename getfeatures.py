@@ -53,10 +53,12 @@ with open(args.genbank) as gb:
             
             line2 = line1.split(",")
             e=1
+            #loop through exons (even if only 1 exon for feature)
             for i in line2:
                 cPos = i.split("..")
                 ps1 = int(re.sub("[A-Za-z()\t \]]", "", cPos[0])) - 1
                 ps2 = int(re.sub("[A-Za-z()\t \]]", "", cPos[1].split("/")[0]))
+                #print informative header and sequence for feature
                 print re.sub(" ", "_" , cHeader) +"_" + "Exon" + str(e) + "_" + "(" + strand + ")" + str(ps1+1) +":"+str(ps2)+ "\n" + saveSeq[ ps1 : ps2 ]
                 e+=1
 
